@@ -1,6 +1,6 @@
 {
   "name": "node-gameloop",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "game loop designed for node applications, not for the browser",
   "main": "index.js",
   "directories": {
@@ -9,8 +9,8 @@
   "scripts": {
     "test": "node test/*",
     "postpublish": "./node_modules/.bin/srun --script=postpublish",
-    "lint": "eslint ./lib --fix",
-    "compile": "babel ./lib --out-dir ./es2015 --presets es2015"
+    "lint": "eslint ./source --fix",
+    "compile": "babel ./source --out-dir ./es2015 --presets es2015"
   },
   "repository": {
     "type": "git",
