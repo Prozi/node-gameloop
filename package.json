@@ -1,6 +1,6 @@
 {
   "name": "node-gameloop",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "game loop designed for node applications, not for the browser",
   "main": "index.js",
   "directories": {
@@ -8,11 +8,13 @@
   },
   "scripts": {
     "test": "node test/*",
-    "postpublish": "./node_modules/.bin/srun --script=postpublish"
+    "postpublish": "./node_modules/.bin/srun --script=postpublish",
+    "lint": "eslint ./lib --fix",
+    "compile": "babel ./lib --out-dir ./es2015 --presets es2015"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tangmi/node-gameloop.git"
+    "url": "https://github.com/Prozi/node-gameloop.git"
   },
   "keywords": [
     "gameloop",
@@ -26,11 +28,39 @@
   "author": "tangmi",
   "license": "Artistic License 2.0",
   "bugs": {
-    "url": "https://github.com/tangmi/node-gameloop/issues"
+    "url": "https://github.com/Prozi/node-gameloop/issues"
   },
-  "homepage": "https://github.com/tangmi/node-gameloop",
+  "homepage": "https://github.com/Prozi/node-gameloop",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "pidusage": "latest",
     "srun": "latest"
+  },
+  "editions": [
+    {
+      "description": "Source + ESNext + Import",
+      "entry": "source/index.js",
+      "syntaxes": [
+        "javascript",
+        "esnext",
+        "import",
+        "arrows",
+        "const",
+        "let",
+        "destructuring"
+      ]
+    },
+    {
+      "description": "Babel Compiled + ES2015 + Require",
+      "entry": "es2015/index.js",
+      "syntaxes": [
+        "javascript",
+        "es2015",
+        "require"
+      ]
+    }
+  ],
+  "dependencies": {
+    "editions": "^1.3.3"
   }
 }

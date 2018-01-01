@@ -1,1 +1,1 @@
-module.exports = require('./lib/gameloop');
+module.exports = require('editions').requirePackage(__dirname, require)
