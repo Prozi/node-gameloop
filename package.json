@@ -1,14 +1,14 @@
 {
-  "name": "node-gameloop",
-  "version": "0.1.7",
+  "name": "gameloop-compatible",
+  "version": "0.2.0",
   "description": "game loop designed for node applications, not for the browser",
   "main": "index.js",
+  "browser": "es2015/index.js",
   "directories": {
     "example": "example"
   },
   "scripts": {
     "test": "node test/*",
-    "postpublish": "./node_modules/.bin/srun --script=postpublish",
     "lint": "eslint ./source --fix",
     "compile": "babel ./source --out-dir ./es2015 --presets es2015"
   },

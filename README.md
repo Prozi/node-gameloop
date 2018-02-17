@@ -1,19 +1,23 @@
-# node-gameloop [![npm version](https://badge.fury.io/js/node-gameloop.svg)](https://badge.fury.io/js/node-gameloop)
+# gameloop-compatible [![npm version](https://badge.fury.io/js/gameloop-compatible.svg)](https://badge.fury.io/js/gameloop-compatible)
 
-A game loop designed by [timetocode](https://github.com/timetocode) for NodeJS applications. Uses a combination of `setTimeout` and `setImmediate` to achieve accurate update ticks with minimal CPU usage.
+A game loop FORK
 
-This repo adds `npm` module support and an API that allows it to be called from client code.
+* designed by [timetocode](https://github.com/timetocode) for NodeJS applications. Uses a combination of `setTimeout` and `setImmediate` to achieve accurate update ticks with minimal CPU usage.
+
+* Uses Editions for non es6 code importers.
+
+* This repo adds `npm` module support and an API that allows it to be called from client code.
 
 ```sh
-npm install --save node-gameloop
+npm install --save gameloop-compatible
 ```
 
 ## Example
 
-`node-gameloop` uses an API very similar to `setTimeout`/`setInterval`, returning an ID that can be used to clear the game loop later.
+`gameloop-compatible` uses an API very similar to `setTimeout`/`setInterval`, returning an ID that can be used to clear the game loop later.
 
 ```js
-const gameloop = require('node-gameloop');
+const gameloop = require('gameloop-compatible');
 
 // start the loop at 30 fps (1000/30ms per frame) and grab its id
 let frameCount = 0;
@@ -32,7 +36,7 @@ setTimeout(function() {
 ## API
 
 ```js
-var gameloop = require('node-gameloop');
+var gameloop = require('gameloop-compatible');
 ```
 
 Return | Function | Params | Description
